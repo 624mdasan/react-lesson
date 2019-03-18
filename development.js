@@ -1,5 +1,5 @@
-
-
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const src = path.resolve(__dirname, 'src')
 const dist = path.resolve(__dirname, 'dist')
@@ -27,5 +27,10 @@ export default {
         extensions: ['.js', '.jsx']
     },
 
-    plugin: []
+    plugin: [
+        new HtmlWebpackPlugin({
+            template: src + '/index.html',
+            filename: 'index.html'
+        })
+    ]
 }
