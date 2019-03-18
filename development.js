@@ -27,7 +27,7 @@ export default {
         extensions: ['.js', '.jsx']
     },
 
-    plugin: [
+    plugins: [
         new HtmlWebpackPlugin({
             template: src + '/index.html',
             filename: 'index.html'
